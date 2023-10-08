@@ -6,7 +6,7 @@ import torch
 import numpy as np
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('new4.csv')
+df = pd.read_csv('data.csv')
 df['Place'] = df['Place'].astype(str)
 df['Suffix'] = df['Suffix'].astype(str)
 # print(len(df))
@@ -150,7 +150,7 @@ if st.button("Predict"):
     # Train a model with the best hyperparameters (you can use your tuning function here)
     best_params, best_accuracy, x,y = tune_hyperparameters(X_train, Y_train)
     # st.write("Best Hyperparameters:", best_params)
-    st.write("Best Accuracy:", best_accuracy)
+    # st.write("Best Accuracy:", best_accuracy)
 
     # Create an instance of the embeddnetwork with the best hyperparameters
     network = embeddnetwork(
